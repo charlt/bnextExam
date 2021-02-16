@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Examen Bnext.
 
 ## Installation
 
@@ -36,38 +36,30 @@ $ npm install
 
 ```bash
 # development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+step 1. docker-compose build
+step 2. docker-compose up 
 ```
 
-## Test
+##Documentation
+Endpoint & Params:
+url: http://localhost:3000
 
-```bash
-# unit tests
-$ npm run test
+USERS
 
-# e2e tests
-$ npm run test:e2e
+- POST url/user/create
+- GET url/user/
 
-# test coverage
-$ npm run test:cov
-```
+CONTACTS
 
-## Support
+- POST url/contacts/create/:userId
+- PUT url/contacts/edit/:userId
+- GET URL/contacts/getContacts/:userId
+- GET url/contacts/commonContacts?userId1=602bd70bf08521004e66c8a1&userId2=602b442c36bd6e2024b3ad6a
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
+Swagger: [url](http://localhost:3000/api/) http://localhost:3000/api/
+
+Postman: [url](https://documenter.getpostman.com/view/6539093/TWDTNzCD) https://documenter.getpostman.com/view/6539093/TWDTNzCD
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+- Author - Charly Bernabe

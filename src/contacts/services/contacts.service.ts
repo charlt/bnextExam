@@ -35,8 +35,9 @@ export class ContactsService {
             'api-key': 'KxpUf0sCeC0phz5rXr3FAjWhqiTsvxiuEtUFtmonBBzCZpqd',
             'number': contact.code + String(contact.phone)
           };
-          //let result = await request({ method: "POST", uri: 'https://neutrinoapi.net/phone-validate', form: params })
-          let jsonResult = { valid: true }// JSON.parse(result);
+          let result = await request({ method: "POST", uri: 'https://neutrinoapi.net/phone-validate', form: params })
+           
+          let jsonResult =JSON.parse(result);// { valid: true }
           if (jsonResult.valid) {
             contact.user = userId;
             const createdContact = new this.contactModel(contact);
@@ -89,8 +90,8 @@ export class ContactsService {
             'api-key': 'KxpUf0sCeC0phz5rXr3FAjWhqiTsvxiuEtUFtmonBBzCZpqd',
             'number': contact.code + String(contact.phone)
           };
-          //let result = await request({ method: "POST", uri: 'https://neutrinoapi.net/phone-validate', form: params })
-          let jsonResult = { valid: true }// JSON.parse(result);
+          let result = await request({ method: "POST", uri: 'https://neutrinoapi.net/phone-validate', form: params })
+          let jsonResult = JSON.parse(result);//{ valid: true } 
           if (jsonResult.valid) {
             const updatedContact = await this.contactModel.findByIdAndUpdate(contact._id, {
               contactName: contact.contactName,
