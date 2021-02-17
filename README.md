@@ -36,7 +36,7 @@ $ npm install
 
 ```bash
 # development
-step 1. docker-compose build
+step 1. docker-compose build --no-cache
 step 2. docker-compose up 
 ```
 
